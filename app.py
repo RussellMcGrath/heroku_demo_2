@@ -1,6 +1,6 @@
 # import necessary libraries
 #from models import create_classes
-#import os
+import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from sqlalchemy.ext.automap import automap_base
@@ -25,6 +25,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '') or "p
 # Remove tracking modifications
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+# Connects to the database using the app config
 db = SQLAlchemy(app)
 
 
