@@ -29,8 +29,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
+# create engine so we can use automap_base
 engine = create_engine(app.config['SQLALCHEMY_DATABASE_URI'])
-
 # reflect an existing database into a new model
 Base = automap_base()
 # reflect the tables
